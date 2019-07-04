@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_back:
-                finish();
+                //返回
+                this.finish();
                 break;
             case R.id.tv_un_mark:
                 tvUnMark.setChecked(true);
