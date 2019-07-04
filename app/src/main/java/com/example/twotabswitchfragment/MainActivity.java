@@ -19,9 +19,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 描述: 两tab切换实例
+ * 描述: 两个tab切换实例
  * 作者|时间: djj on 2019/6/20 0020 下午 3:08
- * 博客地址: http://www.jianshu.com/u/dfbde65a03fc
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -56,31 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(pagerAdapter);
-
-//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int i, float v, int i1) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int i) {
-//                if (i == 0) {
-//                    tvUnMark.setChecked(true);
-//                    tvHaveMark.setChecked(false);
-//                } else if (i == 1) {
-//                    tvUnMark.setChecked(false);
-//                    tvHaveMark.setChecked(true);
-//                }
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int i) {
-//
-//            }
-//        });
     }
 
+    //按钮监听操作
     @OnClick({R.id.btn_back, R.id.tv_un_mark, R.id.tv_have_mark})
     public void onViewClicked(View view) {
         switch (view.getId()) {
