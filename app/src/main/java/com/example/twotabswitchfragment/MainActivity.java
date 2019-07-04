@@ -57,31 +57,9 @@ public class MainActivity extends AppCompatActivity {
         //添加适配器
         pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(pagerAdapter);
-
-//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int i, float v, int i1) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int i) {
-//                if (i == 0) {
-//                    tvUnMark.setChecked(true);
-//                    tvHaveMark.setChecked(false);
-//                } else if (i == 1) {
-//                    tvUnMark.setChecked(false);
-//                    tvHaveMark.setChecked(true);
-//                }
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int i) {
-//
-//            }
-//        });
     }
 
+    //按钮监听操作
     @OnClick({R.id.btn_back, R.id.tv_un_mark, R.id.tv_have_mark})
     public void onViewClicked(View view) {
         switch (view.getId()) {
