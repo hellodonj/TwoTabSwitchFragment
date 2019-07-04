@@ -19,8 +19,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 描述: 两tab切换实例
- * 作者|时间: djj on 2019/6/20 0020 下午 3:08
+ * 描述: 两个tab切换的实例activity
+ * 作者|时间: djj on 2019/7/4 0004 上午 10:24
  * 博客地址: http://www.jianshu.com/u/dfbde65a03fc
  */
 public class MainActivity extends AppCompatActivity {
@@ -51,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
         haveParams.setMarkType(1);
         Fragment haveFragment = TabCommonFragment.newInstance(haveParams);
 
+        //添加fragment
         fragmentList.add(noFragment);
         fragmentList.add(haveFragment);
-
+        //添加适配器
         pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(pagerAdapter);
 
